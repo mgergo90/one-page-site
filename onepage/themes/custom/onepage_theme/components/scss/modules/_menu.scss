@@ -1,0 +1,39 @@
+body {
+  .front-page {
+    .menu {
+      padding: 50px;
+      background: $text-over;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      a {
+        display: block;
+        background: url("../../images/inovae_logo.svg") no-repeat;
+        background-size: 100% auto;
+        width: 260px;
+        height: 70px;
+      }
+    }
+    .nav {
+      .nav-bar {
+        list-style-type: none;
+        li {
+          float: left;
+          a {
+            text-decoration: none;
+            color: $link;
+            padding: 20px;
+            &:hover {
+              color: $link-hover;
+            }
+            &.active {
+              color: $link-active;
+            }
+          }
+        }
+      }
+    }
+  }
+}
