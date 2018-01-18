@@ -22,17 +22,5 @@ function onepage_site_menu() {
  * Front page, menu callback.
  */
 function onepage_site_frontpage() {
-  return '';
-}
-
-/**
- * Implements hook_theme().
- */
-function onepage_site_theme() {
-    $themes = array();
-    $themes['frontpage'] = array(
-        'template' => 'frontpage',
-        'path' => drupal_get_path('module', 'onepage_site') . '/templates',
-    );
-    return $themes;
+  return '<div id="app"></div>';
 }
