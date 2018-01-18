@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ *   One page profile install file.
+ */
+
+/**
+ * Implement hook_install()
+ */
+function onepage_install() {
+  $default_theme = 'onepage_theme';
+  theme_enable(array('seven', $default_theme));
+  variable_set('admin_theme', 'seven');
+  variable_set('theme_default', $default_theme);
+  theme_disable(array('bartik'));
+
+  variable_set('clean_url', 1);
+  variable_set('jquery_update_jquery_version', '1.10');
+  variable_set('site_frontpage', 'frontpage');
+  variable_set('install_profile', 'onepage');
+  variable_set('site_name', 'Demo site');
+}

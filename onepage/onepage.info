@@ -1,0 +1,21 @@
+name = One page profile
+description = One page demo site
+core = 7.x
+
+; Install necessary core modules.
+dependencies[] = block
+dependencies[] = image
+dependencies[] = list
+dependencies[] = menu
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = taxonomy
+dependencies[] = dblog
+dependencies[] = field_ui
+dependencies[] = file
+dependencies[] = locale
+dependencies[] = admin_menu
+
+; Custom modules
+dependencies[] = onepage_site

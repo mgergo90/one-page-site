@@ -1,0 +1,38 @@
+<?php
+
+/**
+ * @file
+ *   One page site module file
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function onepage_site_menu() {
+  $items = array();
+  $items['frontpage'] = array(
+    'title' => '',
+    'page callback' => 'onepage_site_frontpage',
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Front page, menu callback.
+ */
+function onepage_site_frontpage() {
+  return '';
+}
+
+/**
+ * Implements hook_theme().
+ */
+function onepage_site_theme() {
+    $themes = array();
+    $themes['frontpage'] = array(
+        'template' => 'frontpage',
+        'path' => drupal_get_path('module', 'onepage_site') . '/templates',
+    );
+    return $themes;
+}

@@ -1,2 +1,1 @@
-# one-page-site
-Demo site
+# drupal-skeleton
