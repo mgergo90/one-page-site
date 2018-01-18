@@ -1,9 +1,25 @@
+@font-face {
+  font-family: 'Aller';
+  src: url('../../fonts/aller_rg-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../../fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../fonts/aller_rg-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+  url('../../fonts/aller_rg-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../../fonts/aller_rg-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../../fonts/aller_rg-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 body {
   background: $body-color;
-
+  font-family: "Aller", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  * {
+    box-sizing: border-box;
+  }
   .front-page {
     width: 100%;
     max-width: 1080px;
     margin: 0 auto;
+  }
+  .clear {
+    clear: both;
   }
 }

@@ -1,0 +1,13 @@
+.project {
+  background: $text-over;
+  padding: 50px;
+  @include hrline;
+  .project-title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

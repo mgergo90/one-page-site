@@ -1,0 +1,6 @@
+@mixin hrline {
+  position: relative;
+  background-image: url("../../images/bg-line.png");
+  background-repeat: repeat-y;
+  background-position: center;
+}

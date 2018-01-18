@@ -65,9 +65,24 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|svg)$/,
                 loader: 'file-loader',
+                include: [
+                    path.resolve(__dirname, 'onepage/themes/custom/onepage_theme/images')
+                ],
                 options: {
                     name: '[name].[ext]?[hash]',
                     outputPath: 'public/images/',
+                    publicPath: '/profiles/onepage/themes/custom/onepage_theme/dist/'
+                }
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loader: 'file-loader',
+                include: [
+                    path.resolve(__dirname, 'onepage/themes/custom/onepage_theme/fonts')
+                ],
+                options: {
+                    name: '[name].[ext]?[hash]',
+                    outputPath: 'public/fonts/',
                     publicPath: '/profiles/onepage/themes/custom/onepage_theme/dist/'
                 }
             }

@@ -1,0 +1,22 @@
+.latest {
+  background: $blue-pale;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-over;
+  font-size: 45px;
+  text-align: center;
+  .section-logo {
+    background: url("../../images/inovae_avatar_fff.svg") no-repeat;
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+  @media only screen and (max-width: ($screen-sm-max)) {
+    flex-direction: column;
+    .section-logo {
+      margin: 0 0 15px 0;
+    }
+  }
+}

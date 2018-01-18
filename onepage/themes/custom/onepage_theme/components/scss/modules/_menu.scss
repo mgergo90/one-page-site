@@ -1,11 +1,27 @@
 body {
   .front-page {
     .menu {
+      z-index: 1;
       padding: 50px;
       background: $text-over;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include hrline;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      transition: all 0.5s ease;
+      &.scrolled {
+        box-shadow: 0 4px 2px -2px $blue-darker;
+        padding: 10px 50px;
+      }
+      @media only screen and (max-width: ($screen-sm-max)) {
+        padding: 20px;
+        &.scrolled {
+          padding: 20px;
+        }
+      }
     }
     .logo {
       a {
@@ -14,6 +30,26 @@ body {
         background-size: 100% auto;
         width: 260px;
         height: 70px;
+        @media only screen and (max-width: ($screen-xs-min)) {
+          width: 145px;
+          height: 40px;
+        }
+      }
+    }
+    .navbar-toggle {
+      display: none;
+      float: right;
+      height: 50px;
+      width: 50px;
+      background: none;
+      border: none;
+      .icon-bar {
+        border-bottom: 3px solid $blue-pale;
+        margin: 8px 0;
+        display: block;
+      }
+      @media only screen and (max-width: ($screen-sm-max)) {
+        display: block;
       }
     }
     .nav {
@@ -24,7 +60,8 @@ body {
           a {
             text-decoration: none;
             color: $link;
-            padding: 20px;
+            padding: 25px;
+            display: block;
             &:hover {
               color: $link-hover;
             }
@@ -33,6 +70,34 @@ body {
             }
           }
         }
+      }
+      @media only screen and (max-width: ($screen-sm-max)) {
+        position: absolute;
+        background: $text-over;
+        width: 100%;
+        top: 110px;
+        left: 0;
+        display: block;
+        &.collapsed {
+          display: none;
+        }
+        .nav-bar {
+          li {
+            float: none;
+            a {
+              border-bottom: 1px solid $blue-pale;
+            }
+            &:first-child a {
+              border-top: 1px solid $blue-pale;
+            }
+            &:last-child a {
+              border: none;
+            }
+          }
+        }
+      }
+      @media only screen and (max-width: ($screen-xs-min)) {
+          top: 90px;
       }
     }
   }

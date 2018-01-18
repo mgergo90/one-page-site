@@ -1,0 +1,32 @@
+.footer {
+  background: linear-gradient(to bottom, $blue-pale , $blue-darker);
+  float: left;
+  width: 100%;
+  color: $text-over;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .visit {
+    border-radius: 5px;
+    background: none;
+    border: 1px solid $text-over;
+    color: $text-over;
+    margin: 50px auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .footer-logo {
+    background: url("../../images/inovae_avatar_fff.svg") no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 30px auto;
+    display: block;
+  }
+  .footer-text {
+    font-size: 20px;
+    margin-bottom: 100px;
+    text-align: center;
+  }
+}

@@ -11,7 +11,7 @@
 function onepage_site_menu() {
   $items = array();
   $items['frontpage'] = array(
-    'title' => '',
+    'title' => 'Our latest project',
     'page callback' => 'onepage_site_frontpage',
     'access arguments' => array('access content'),
   );

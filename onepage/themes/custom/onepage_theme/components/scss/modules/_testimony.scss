@@ -1,0 +1,43 @@
+.testimony {
+  background: $blue-darker;
+  padding: 50px 0;
+  color: $text-over;
+  .testimony-content {
+    width: 66.666%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    float: left;
+    padding: 30px;
+    .testimony-title {
+      font-size: 45px;
+    }
+    .testimony-content {
+      margin: 30px 0;
+      padding: 0;
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  .testimony-image {
+    width: 33.333%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    padding: 30px;
+    img {
+      width: 100%;
+      max-width: 250px;
+      height: auto;
+      border-radius: 50%;
+    }
+  }
+  @media only screen and (max-width: ($screen-sm-max)) {
+    .testimony-image,
+    .testimony-content {
+      width: 100%;
+      align-items: center;
+    }
+  }
+}
