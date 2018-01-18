@@ -6,6 +6,7 @@
         <testimony></testimony>
         <detail-boxes></detail-boxes>
         <footer-block></footer-block>
+        <div class="clear"></div>
     </div>
 </template>
 

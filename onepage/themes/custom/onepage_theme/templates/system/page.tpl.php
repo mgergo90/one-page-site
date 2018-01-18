@@ -74,24 +74,18 @@
 ?>
 
 <div id="page-wrapper"><div id="page">
-
-        <?php print $messages; ?>
-
-        <div id="main-wrapper"><div id="main" class="clearfix">
-
-                <div id="content" class="column"><div class="section">
-                        <a id="main-content"></a>
-                        <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
-                        <?php print render($page['help']); ?>
-                        <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
-                        <?php print render($page['content']); ?>
-                        <?php print $feed_icons; ?>
-                    </div></div> <!-- /.section, /#content -->
-
-            </div></div> <!-- /#main, /#main-wrapper -->
-
-        <div id="footer"><div class="section">
-                <?php print render($page['footer']); ?>
-            </div></div> <!-- /.section, /#footer -->
-
-    </div></div> <!-- /#page, /#page-wrapper -->
+    <?php print $messages; ?>
+    <div id="main-wrapper">
+        <div id="main" class="clearfix">
+            <div id="content" class="column">
+                <div class="section">
+                    <a id="main-content"></a>
+                    <?php if ($tabs): ?><div class="tabs"><?php print render($tabs); ?></div><?php endif; ?>
+                    <?php print render($page['help']); ?>
+                    <?php if ($action_links): ?><ul class="action-links"><?php print render($action_links); ?></ul><?php endif; ?>
+                    <?php print render($page['content']); ?>
+                </div>
+            </div> <!-- /.section, /#content -->
+        </div>
+    </div> <!-- /#main, /#main-wrapper -->
+</div></div> <!-- /#page, /#page-wrapper -->
