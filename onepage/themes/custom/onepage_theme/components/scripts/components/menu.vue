@@ -32,14 +32,16 @@
                 this.collapsed = !this.collapsed;
             },
             handleScroll: function(event) {
-                this.scrolled = event.pageY > 0;
+                var doc = document.documentElement;
+                var top = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+                this.scrolled = top > 0;
             }
         },
         created () {
-            window.addEventListener('scroll', this.handleScroll);
+            document.addEventListener('scroll', this.handleScroll);
         },
         destroyed () {
-            window.removeEventListener('scroll', this.handleScroll);
+            document.removeEventListener('scroll', this.handleScroll);
         }
     };
 </script>
